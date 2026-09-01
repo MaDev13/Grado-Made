@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Madelaine Blanco V. — Compilando un sueño</title>
+    <meta
+      name="description"
+      content="Invitación interactiva a la graduación de Madelaine Blanco V., Ingeniera de Sistemas. 2 de octubre de 2026."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&family=Outfit:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ═══ PANTALLA 1 · LOADING ═══ -->
+    <div class="gate" id="gate" aria-hidden="false">
+      <div class="gate__panel">
+        <div class="gate__code" aria-hidden="true">
+          <span class="token-fn">MADELAINE</span><span class="token-dot">.</span><span
+            class="token-fn"
+            >BLANCO</span
+          ><span class="token-fn">_V</span><span class="token-paren">()</span>
+        </div>
+
+        <p class="gate__status" id="gate-status">Initializing graduation...</p>
+
+        <div class="gate__bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+          <div class="gate__bar-fill" id="gate-bar"></div>
+        </div>
+        <p class="gate__percent" id="gate-percent">0%</p>
+
+        <p class="gate__ready" id="gate-ready" hidden>System ready ✓</p>
+        <p class="gate__guest" id="gate-guest" hidden>guest detected...</p>
+
+        <button type="button" class="btn btn--enter" id="btn-enter" hidden>
+          ENTRAR <span aria-hidden="true">→</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- ═══ CONTENIDO PRINCIPAL ═══ -->
+    <div class="app" id="app" hidden>
+      <!-- Decoración sutil -->
+      <div class="app__bg" aria-hidden="true">
+        <span class="deco deco--bracket">{</span>
+        <span class="deco deco--slash">&lt;/&gt;</span>
+        <span class="deco deco--binary">MaDev</span>
+        <span class="deco deco--flower" aria-hidden="true"></span>
+      </div>
+
+      <!-- PANTALLA 2 · DASHBOARD -->
+      <header class="dashboard" id="inicio">
+        <div class="dashboard__top">
+          <p class="dashboard__signature">
+            <span>MADELAINE</span><span class="dim">.</span><span>BLANCO</span><span class="dim">_V</span><span class="paren">()</span>
+            <span class="dashboard__slash" aria-hidden="true">&lt;/&gt;</span>
+          </p>
+          <p class="dashboard__badge">STATUS: <span class="ok">GRADUATED ✓</span></p>
+        </div>
+
+        <div class="dashboard__hero reveal">
+          <p class="dashboard__compile">COMPILANDO UN SUEÑO...</p>
+          <p class="dashboard__story">
+            Años de aprendizaje, proyectos y muchos <code>debug()</code>. Hoy celebramos este logro.
+          </p>
+
+          <div class="dashboard__identity">
+            <h1>MADELAINE BLANCO V.</h1>
+            <p class="dashboard__degree">INGENIERÍA DE SISTEMAS</p>
+            <p class="dashboard__event">
+              <svg class="icon icon--cap" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M4 10l8-4 8 4-8 4-8-4z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round" />
+                <path d="M6 12v4c0 1.5 3.6 3 6 3s6-1.5 6-3v-4" stroke="currentColor" stroke-width="1.2" />
+                <path d="M20 10v5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" />
+              </svg>
+              MI GRADUACIÓN
+            </p>
+            <p class="dashboard__datetime">
+              <span>02 · OCTUBRE · 2026</span>
+              <span class="dot">·</span>
+              <span>6:00 P. M.</span>
+            </p>
+          </div>
+
+          <div class="countdown reveal" id="countdown" aria-live="polite">
+            <p class="countdown__header">countdown.to(graduacion)</p>
+            <div class="countdown__row">
+              <div class="countdown__item">
+                <span class="countdown__value" data-unit="days">00</span>
+                <span class="countdown__label">días</span>
+              </div>
+              <span class="countdown__sep" aria-hidden="true">:</span>
+              <div class="countdown__item">
+                <span class="countdown__value" data-unit="hours">00</span>
+                <span class="countdown__label">hrs</span>
+              </div>
+              <span class="countdown__sep" aria-hidden="true">:</span>
+              <div class="countdown__item">
+                <span class="countdown__value" data-unit="minutes">00</span>
+                <span class="countdown__label">min</span>
+              </div>
+              <span class="countdown__sep" aria-hidden="true">:</span>
+              <div class="countdown__item">
+                <span class="countdown__value" data-unit="seconds">00</span>
+                <span class="countdown__label">seg</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <!-- PANTALLA 3 · README -->
+        <section class="section readme reveal" id="readme">
+          <div class="section__inner">
+            <div class="readme__window">
+              <div class="readme__titlebar">
+                <span class="readme__dots" aria-hidden="true"></span>
+                <span class="readme__filename">README.md</span>
+              </div>
+              <div class="readme__body">
+                <pre class="readme__content"><code># Mi graduación
+
+Hubo errores, noches largas
+y momentos de "¿por qué no funciona?".
+
+También aprendizajes, personas increíbles
+y un Dios fiel que nunca me soltó.
+
+Quiero celebrar este "release"
+con quienes estuvieron en el camino.</code></pre>
+              </div>
+            </div>
+
+            <p class="verse verse--soft reveal">
+              <span class="verse__text">“Hasta aquí nos ayudó Jehová.”</span>
+              <span class="verse__ref">1 Samuel 7:12</span>
+            </p>
+          </div>
+        </section>
+
+        <!-- CONFIRMACIÓN -->
+        <section class="section confirm reveal" id="confirmar">
+          <div class="section__inner">
+            <p class="section__tag">&gt; ./confirm-attendance</p>
+            <h2 class="section__title">Confirma tu asistencia</h2>
+            <p class="section__lead">Solo toma un minuto. Me ayuda a preparar este día contigo.</p>
+
+            <button type="button" class="btn btn--primary confirm__btn" id="btn-rsvp">
+              <span class="prompt">&gt;</span> CONFIRMAR ASISTENCIA
+            </button>
+          </div>
+        </section>
+
+        <!-- MAPA -->
+        <section class="section map-section reveal" id="ubicacion">
+          <div class="section__inner">
+            <p class="section__tag">&gt; ./location</p>
+            <h2 class="section__title">Cómo llegar</h2>
+            <p class="section__lead section__lead--compact">
+              Calle 59 #24-26, Los Andes · Barranquilla
+            </p>
+
+            <div class="map">
+              <iframe
+                title="Ubicación — Calle 59 #24-26, Barranquilla"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d376.7940519440039!2d-74.80231116481514!3d10.97168670065315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef42d47395d35bb%3A0xe8efd890626e8977!2sCl.%2059%20%23%2024-26%2C%20Suroccidente%2C%20Barranquilla%2C%20Atl%C3%A1ntico!5e1!3m2!1ses-419!2sco!4v1786421369202!5m2!1ses-419!2sco"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
+              ></iframe>
+            </div>
+
+            <a
+              class="btn btn--ghost map__open"
+              href="https://www.google.com/maps/search/?api=1&query=Cl.+59+%2324-26,+Suroccidente,+Barranquilla,+Atl%C3%A1ntico"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Abrir en Google Maps
+            </a>
+          </div>
+        </section>
+
+        <!-- CIERRE EMOTIVO -->
+        <section class="section closing reveal" id="sueno">
+          <div class="section__inner section__inner--narrow">
+            <p class="section__tag">05 · Un sueño cumplido</p>
+            <h2 class="closing__heading">Un sueño que hoy se hace realidad</h2>
+
+            <div class="closing__body">
+              <p class="closing__text">
+                Este logro representa años de esfuerzo, aprendizajes, retos y sueños.
+              </p>
+              <p class="closing__text">
+                Pero sobre todo, la fidelidad de Dios y el amor de quienes caminaron conmigo.
+              </p>
+              <p class="closing__text closing__text--emphasis">
+                Gracias por ser parte de esta historia.
+              </p>
+            </div>
+
+            <p class="closing__sign">Con cariño,<br /><em>Madelaine</em></p>
+
+            <p class="verse verse--closing">
+              <span class="verse__text"
+                >“Estando persuadido de esto, que el que comenzó en vosotros la buena obra, la
+                perfeccionará hasta el día de Jesucristo.”</span
+              >
+              <span class="verse__ref">Filipenses 1:6</span>
+            </p>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p>Madelaine Blanco V. · Ingeniería de Sistemas · 2026</p>
+      </footer>
+    </div>
+
+    <!-- Modal RSVP — Google Forms -->
+    <div class="modal" id="modal-rsvp" hidden>
+      <div class="modal__backdrop" data-close-modal></div>
+      <div
+        class="modal__panel modal__panel--form"
+        role="dialog"
+        aria-labelledby="rsvp-title"
+        aria-modal="true"
+      >
+        <button class="modal__close" type="button" data-close-modal aria-label="Cerrar">×</button>
+        <h3 id="rsvp-title">Confirmar asistencia</h3>
+        <p class="modal__lead" id="rsvp-lead">Completa el formulario para reservar tu lugar.</p>
+
+        <div class="rsvp-frame" id="rsvp-frame">
+          <iframe id="rsvp-iframe" title="Formulario de confirmación de asistencia" hidden></iframe>
+          <div class="rsvp-pending" id="rsvp-pending">
+            <p>Falta configurar el enlace de Google Forms en <code>script.js</code>.</p>
+          </div>
+        </div>
+
+        <div class="rsvp-thanks" id="rsvp-thanks" hidden>
+          <svg class="icon icon--cap icon--thanks" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M4 10l8-4 8 4-8 4-8-4z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round" />
+            <path d="M6 12v4c0 1.5 3.6 3 6 3s6-1.5 6-3v-4" stroke="currentColor" stroke-width="1.2" />
+          </svg>
+          <h4>¡Gracias por confirmar!</h4>
+          <p>Tu respuesta fue registrada con cariño.</p>
+          <p class="rsvp-thanks__date">Nos vemos · 02 · 10 · 2026 · 6:00 p.m.</p>
+          <button type="button" class="btn btn--primary" data-close-modal>Cerrar</button>
+        </div>
+
+        <a
+          class="btn btn--ghost rsvp-external"
+          id="rsvp-open-external"
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+          hidden
+        >
+          Abrir formulario completo
+        </a>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -8,7 +8,7 @@ const CONFIG = {
   mapsUrl:
     "https://www.google.com/maps/search/?api=1&query=Cl.+59+%2324-26,+Suroccidente,+Barranquilla,+Atl%C3%A1ntico",
   rsvpFormUrl:
-    "https://docs.google.com/forms/d/e/1FAIpQLScyYMZkRdUfIYMyHEkQibeThvaQpdErHKPYjVm0IChfrtfccg/viewform?usp=header",
+    "https://docs.google.com/forms/d/e/1FAIpQLScWsXX9unTT1xmpBOd7aQhXKLpefgLLPwBmG-trjYTIf-qwTg/viewform",
 };
 
 const $ = (sel, root = document) => root.querySelector(sel);
